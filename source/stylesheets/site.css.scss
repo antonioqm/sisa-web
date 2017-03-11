@@ -3,78 +3,205 @@ div,li,ul,ol,a,i,small,span,input,form,{
 	transition: all 0.3s ease;
 }
 
+
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */ 
 @media only screen and (min-width : 320px) {
-	#sisaCarousel{
-		margin-top: 80px;
+	// Footer
+	.footer-bottom{
+		width:100% !important;
+		height: 50px !important;
+		background-color: #F0F0F0 !important;
+		text-align: center;
+		p{
+			line-height: 1;
+			padding-top: 22px;
+		}
 	}
+	.footer{
+		background-color: #F4F4F4 !important;
+		padding-top: 20px;
+		padding-bottom: 70px;
+	}
+	.footer-logo-sisa{
+		background-image: url(../images/bg-rodape.svg) !important;
+		background-color: #fff !important;
+		background-size: cover;
+		background-position: center center;
+		pointer-events: none;
+		height: 100px;
+
+	}
+	.title-sisa-footer, .title-sisa-footer a{
+		/* Titulo Menu Footer: */
+		font-family: ProximaNova-Extrabld;
+		font-size: 16px;
+		color: #4A4A4A !important; 
+		line-height: 31px;
+		text-transform: uppercase !important;
+	}
+	.title-sisa-footer ~ ul{
+		/* Lista de Menus Footer: */
+
+		padding-left: 0px !important;
+		li{
+			list-style: none !important;
+			a{
+				font-family: ProximaNova-Regular !important;
+				font-size: 14px !important;
+				color: #4A4A4A !important;
+				line-height: 31px !important;
+				text-transform: uppercase !important;
+				}
+		}
+	}
+	// fim footer
+// Carousel
+
+#sisaCarousel{
+	margin-top: 80px;
+	h1{
+		/* Sisa Banner Title */
+		font-family: ProximaNova-Black;
+		font-size: 30px;
+		color: #FFFFFF;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.63);
+		text-align: left;
+	}
+	h1::before{
+		content: "";
+		border-bottom: 3px solid #50E3C2;
+		height: 3px;
+		width: 20%;
+		position: absolute;
+		top: 77px;
+	}
+	/*Sisa Banner carousel-caption*/
+	.carousel-caption{
+		margin-left: 0px;
+		// margin-right: 25%;
+		p {
+			a{
+			/* Button leia mais */
+			background: #417505;
+			box-shadow: 0 2px 4px 0 rgba(71,211,193,0.21);
+			border-radius: 29px;
+			font-family: ProximaNova-Medium;
+			font-size: 12px;
+			line-height: 12px;
+			padding: 12px 18px;
+			display: none;
+		}
+		a:hover{
+			background-color: #50E3C2;
+		}
+	}
+}
+.item{
+	.description{
+			/* O Sistema de Incenti: */
+			font-family: ProximaNova-Regular;
+			font-size: 13px;
+			color: #FFFFFF;
+			text-align: left;
+			line-height: 18px;
+			height: 30px;
+			overflow: hidden;
+			// display: none;
+
+		}
+	}
+	.item::before{
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		pointer-events: none;
+		background-image: url(../images/gradient-banner.svg);
+	}
+}
 }
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
+// Carousel
 
+#sisaCarousel{
+	margin-top: 80px;
+	h1{
+		/* Sisa Banner Title */
+		font-family: ProximaNova-Black;
+		font-size: 30px;
+		color: #FFFFFF;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.63);
+		text-align: left;
+	}
+	h1::before{
+		content: "";
+		border-bottom: 3px solid #50E3C2;
+		height: 3px;
+		width: 20%;
+		position: absolute;
+		top: 77px;
+	}
+	/*Sisa Banner carousel-caption*/
+	.carousel-caption{
+		margin-left: 0px;
+		padding-bottom: 8% !important;
+		p {
+			text-align: left;
+			a{
+			/* Button leia mais */
+			background: #417505;
+			box-shadow: 0 2px 4px 0 rgba(71,211,193,0.21);
+			border-radius: 29px;
+			font-family: ProximaNova-Medium;
+			font-size: 12px;
+			line-height: 12px;
+			padding: 12px 18px;
+			display: inline;
+		}
+		a:hover{
+			background-color: #50E3C2;
+		}
+	}
+}
+.item{
+	.description{
+			/* O Sistema de Incenti: */
+			font-family: ProximaNova-Regular;
+			font-size: 13px;
+			color: #FFFFFF;
+			text-align: left;
+			line-height: 18px;
+			height: 55px;
+			overflow: hidden;
+			// display: none;
+
+		}
+	}
+
+}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.footer-logo-sisa{
+		background-image: url(../images/bg-rodape.svg) !important;
+		background-color: #fff !important;
+		background-size: cover;
+		background-position: center center;
+		pointer-events: none;
+		height: 220px;
 
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-}
-
-// Collapse dropdown
-
-// Collapse dropdown
-.sisa-brand .navbar-brand {
-  display: flex;
-  align-items: center;
-}
-.sisa-brand .navbar-brand>img {
-  padding: 7px 14px;
-}
-
-.dropdown{
-	#user{
-		.material-icons{
-			border: 2px solid #9B9B9B;
-			border-radius: 50%;
-			// padding: 5px;
-			// margin: -7px;			
-		}
 	}
-}
-
-
-
-
-.sisa-search, .sisa-container-search{
-background: rgba(255,255,255,0.27);
-box-shadow: none !important;
-border: 1px solid #E0E0E0 !important;
-border-radius: 30px!important;
-padding: 15px 20px !important;
-}
-
-#navbar-main{
-	a{
-		text-transform: uppercase;
-		font-size: 11px;
-		font-weight: 400;
-	}
-}
-// Carousel
-
 #sisaCarousel{
+	margin-top: 80px;
 	h1{
 		/* Sisa Banner Title */
 		font-family: ProximaNova-Black;
@@ -89,52 +216,175 @@ padding: 15px 20px !important;
 		height: 3px;
 		width: 20%;
 		position: absolute;
-		top: 105px;
+		top: 110px;
 	}
 	/*Sisa Banner carousel-caption*/
 	.carousel-caption{
 		margin-left: 0px;
-		margin-right: 25%;
+		margin-right: 18%;
 		p {
+			text-align: left;
 			a{
 			/* Button leia mais */
 			background: #417505;
 			box-shadow: 0 2px 4px 0 rgba(71,211,193,0.21);
 			border-radius: 29px;
 			font-family: ProximaNova-Medium;
-			font-size: 18px;
-			line-height: 18px;
-			padding: 15px 40px;
-			}
-			a:hover{
-				background-color: #50E3C2;
-			}
+			font-size: 12px;
+			line-height: 12px;
+			padding: 14px 22px;
+			display: inline;
+		}
+		a:hover{
+			background-color: #50E3C2;
 		}
 	}
-	.item{
-		p{
+}
+.item{
+	.description{
 			/* O Sistema de Incenti: */
-		font-family: ProximaNova-Regular;
-		font-size: 18px;
-		color: #FFFFFF;
-		text-align: left;
-		line-height: 22px;
+			font-family: ProximaNova-Regular;
+			font-size: 14px;
+			color: #FFFFFF;
+			text-align: left;
+			line-height: 18px;
+			height: auto;
+			// overflow: hidden;
+			// display: none;
 
 		}
 	}
-	.item::before{
-	content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    pointer-events: none;
-    background-image: url(../images/gradient-banner.svg);
+}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+#sisaCarousel{
+	margin-top: 80px;
+	h1{
+		/* Sisa Banner Title */
+		font-family: ProximaNova-Black;
+		font-size: 60px;
+		color: #FFFFFF;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.63);
+		text-align: left;
+	}
+	/*Sisa Banner carousel-caption*/
+	.carousel-caption{
+		margin-left: 0px;
+		margin-right: 25%;
+		p {
+			text-align: left;
+			a{
+			/* Button leia mais */
+			font-size: 16px;
+			line-height: 12px;
+			padding: 14px 22px;
+			display: inline;
+		}
 	}
 }
+.item{
+	.description{
+			/* O Sistema de Incenti: */
+			font-family: ProximaNova-Regular;
+			font-size: 16px;
+			color: #FFFFFF;
+			text-align: left;
+			line-height: 22px;
+			height: auto;
+			padding-bottom: 22px;
+
+
+		}
+	}
+}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+// Collapse dropdown
+
+// Collapse dropdown
+.sisa-brand .navbar-brand {
+	display: flex;
+	align-items: center;
+}
+.sisa-brand .navbar-brand>img {
+	padding: 7px 14px;
+}
+
+.dropdown{
+	.glyphicon-option-horizontal{
+		font-size: 17px;				
+	}
+}
+// Custom active collpse
+@media (max-width: 1200px) {
+	.navbar-header {
+		float: none;
+	}
+	.navbar-left,.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle {
+		display: block;
+	}
+	.navbar-collapse {
+		border-top: 1px solid #ebebeb;
+		box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+		display: none!important;
+	}
+	.navbar-nav {
+		float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+		float: none;
+	}
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.collapse.in{
+		display:block !important;
+	}
+	.navbar-collapse.in {
+		overflow-y: auto !important;
+	}
+}
+
+.sisa-search, .sisa-container-search{
+	background: rgba(255,255,255,0.27);
+	box-shadow: none !important;
+	border: 1px solid #E0E0E0 !important;
+	border-radius: 30px!important;
+	padding: 15px 20px !important;
+}
+.sisa-search{
+	background-image: url(../images/lupe.svg) !important;
+	background-repeat: no-repeat !important;
+	background-position: right 5px center !important;
+	padding-right: 40px !important;
+}
+
+#navbar-main{
+	a{
+		text-transform: uppercase;
+		font-size: 11px;
+		font-weight: 400;
+	}
+}
+
 
 
 
