@@ -5,6 +5,7 @@
 # Per-page layout changes:
 #
 # With no layout
+page '../stylesheets/*.css', layout: true
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
@@ -35,10 +36,19 @@ end
 # end
 
 # Build-specific configuration
-configure :build do
+# configure :build do
   # Minify CSS on build
-  activate :minify_css
+  # activate :minify_css
 
   # Minify Javascript on build
+  # activate :minify_javascript
+# end
+configure :build do
+  activate :minify_css
   activate :minify_javascript
+
+  # Append a hash to asset urls (make sure to use the url helpers)
+  activate :asset_hash
+
+  activate :asset_host, :host => './'
 end
